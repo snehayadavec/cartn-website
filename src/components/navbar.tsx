@@ -1,7 +1,7 @@
-import type { ReactElement } from 'react';
-import { useState, useEffect } from 'react';
-import { Button } from './ui/button';
-import { Menu, X } from 'lucide-react';
+import type { ReactElement } from "react";
+import { useState, useEffect } from "react";
+import { Button } from "./ui/button";
+import { Menu, X } from "lucide-react";
 
 type NavbarProps = {
   onRequestDemo?: () => void;
@@ -20,23 +20,23 @@ const Navbar = ({ onRequestDemo }: NavbarProps): ReactElement => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navLinks: NavLink[] = [
-    { name: 'Platform', href: '#platform' },
-    { name: 'Solutions', href: '#solutions' },
-    { name: 'Industries', href: '#industries' },
-    { name: 'Services', href: '#services' },
-    { name: 'About', href: '#about' },
-    { name: 'Contact', href: '#contact' }
+    { name: "Platform", href: "#platform" },
+    { name: "Solutions", href: "#solutions" },
+    { name: "Industries", href: "#industries" },
+    { name: "Services", href: "#services" },
+    { name: "About", href: "#about" },
+    { name: "Contact", href: "#contact" },
   ];
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
       setIsMobileMenuOpen(false);
     }
   };
@@ -45,15 +45,15 @@ const Navbar = ({ onRequestDemo }: NavbarProps): ReactElement => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-gray-100/95 backdrop-blur-md shadow-lg'
-          : 'bg-transparent'
+          ? "bg-sand-50/95 backdrop-blur-md shadow-lg border-b border-sand-200"
+          : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo/Brand */}
           <div className="flex-shrink-0">
-            <span className="text-3xl font-medium text-sand-700">
+            <span className="text-3xl font-medium text-agedGold-500">
               CARTN
             </span>
           </div>
@@ -64,7 +64,7 @@ const Navbar = ({ onRequestDemo }: NavbarProps): ReactElement => {
               <button
                 key={link.name}
                 onClick={() => scrollToSection(link.href)}
-                className="text-sand-800 text-xl font-normal hover:text-sand-900 transition-colors duration-200"
+                className="text-ink-400 text-xl font-normal hover:text-ink-500 transition-colors duration-200"
               >
                 {link.name}
               </button>
@@ -75,7 +75,7 @@ const Navbar = ({ onRequestDemo }: NavbarProps): ReactElement => {
           <div className="hidden md:block">
             <Button
               onClick={() => onRequestDemo?.()}
-              className="bg-sand-900/90 text-base font-extralight hover:bg-sand-900 text-sand-50 p-4 transition-all duration-200 rounded-[6px]"
+              className="bg-ink-500 text-base font-extralight hover:bg-ink-500/80 text-sand-50 p-4 transition-all duration-200 rounded-[6px]"
             >
               Request Demo
             </Button>
@@ -85,7 +85,7 @@ const Navbar = ({ onRequestDemo }: NavbarProps): ReactElement => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-sand-400 hover:text-sand-900 transition-colors"
+              className="text-ink-400 hover:text-ink-500 transition-colors"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -95,13 +95,13 @@ const Navbar = ({ onRequestDemo }: NavbarProps): ReactElement => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-sand-100 border-t border-sand-300 shadow-lg">
+        <div className="md:hidden bg-sand-50 border-t border-sand-200 shadow-lg">
           <div className="px-4 pt-2 pb-4 space-y-2">
             {navLinks.map((link) => (
               <button
                 key={link.name}
                 onClick={() => scrollToSection(link.href)}
-                className="block w-full text-left px-3 py-2 text-sand-900 hover:bg-sand-200 hover:text-sand-700 rounded-md transition-colors"
+                className="block w-full text-left px-3 py-2 text-ink-500 hover:bg-sand-100 hover:text-agedGold-500 rounded-md transition-colors"
               >
                 {link.name}
               </button>
@@ -111,7 +111,7 @@ const Navbar = ({ onRequestDemo }: NavbarProps): ReactElement => {
                 onRequestDemo?.();
                 setIsMobileMenuOpen(false);
               }}
-              className="w-full bg-sand-700 hover:bg-sand-800 text-sand-50 mt-2"
+              className="w-full bg-ink-500 hover:bg-ink-500/80 text-sand-50 mt-2"
             >
               Request Demo
             </Button>
