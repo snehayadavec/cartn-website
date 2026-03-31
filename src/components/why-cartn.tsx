@@ -14,17 +14,11 @@ type Reason = {
 const WhyCARTN: React.FC = () => {
   const getIcon = (iconName: keyof typeof LucideIcons) => {
     const Icon = LucideIcons[iconName] as React.ComponentType<LucideProps>;
-    return Icon ? <Icon className="w-6 h-6 text-white" /> : null;
+    return Icon ? <Icon className="w-6 h-6 text-sand-50" /> : null;
   };
 
   return (
-    <section
-      id="about"
-      className="py-24 relative overflow-hidden bg-gradient-to-b from-slate-100 via-slate-50 to-white"
-    >
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-100 via-transparent to-slate-50" />
-
+    <section id="about" className="py-24 relative overflow-hidden bg-sand-50 text-ink-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -33,10 +27,10 @@ const WhyCARTN: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-2xl md:text-4xl font-bold text-sand-900 mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-ink-500 mb-4">
             Why Choose CARTN?
           </h2>
-          <p className="text-xl text-sand-900 max-w-3xl mx-auto">
+          <p className="text-xl text-ink-400 max-w-3xl mx-auto">
             Enterprise-grade asset tracking that delivers results from day one
           </p>
         </motion.div>
@@ -60,10 +54,10 @@ const WhyCARTN: React.FC = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-sand-900">
+                  <h3 className="text-xl font-bold text-ink-500">
                     {reason.title}
                   </h3>
-                  <p className="text-sand-900 text-lg">{reason.description}</p>
+                  <p className="text-ink-400 text-lg">{reason.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -75,12 +69,12 @@ const WhyCARTN: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false }}
             transition={{ delay: 0.6, duration: 0.6 }}
-            className="flex-1 bg-gradient-to-r from-sand-900 to-sand-800 rounded-2xl p-8 md:p-12 text-white"
+            className="flex-1 bg-sand-200 rounded-2xl p-8 md:p-12 text-ink-500"
           >
             <h3 className="text-xl md:text-2xl font-bold mb-6">
               End-to-End Solution Provider
             </h3>
-            <p className="text-lg text-sand-100 mb-14 max-w-md">
+            <p className="text-lg text-ink-400 mb-14 max-w-md">
               From hardware selection to software deployment, we handle
               everything. Focus on your business while we manage your asset
               tracking infrastructure.
@@ -88,15 +82,15 @@ const WhyCARTN: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
                 <div className="text-3xl font-bold mb-2">10+</div>
-                <div className="text-sand-100 text-base">Years Experience</div>
+                <div className="text-ink-400 text-base">Years Experience</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
                 <div className="text-3xl font-bold mb-2">500K+</div>
-                <div className="text-sand-100 text-base">Assets Tracked</div>
+                <div className="text-ink-400 text-base">Assets Tracked</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 text-center">
                 <div className="text-3xl font-bold mb-2">24/7</div>
-                <div className="text-sand-100 text-base">Support Available</div>
+                <div className="text-ink-400 text-base">Support Available</div>
               </div>
             </div>
           </motion.div>

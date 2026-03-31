@@ -43,7 +43,7 @@ const WarehouseVisuals = (): ReactElement => {
   const timelineControls = useAnimation();
 
   return (
-    <section className="py-24 overflow-hidden">
+    <section className="py-24 overflow-hidden bg-sand-50 text-ink-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -52,10 +52,10 @@ const WarehouseVisuals = (): ReactElement => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-2xl md:text-4xl font-bold text-sand-900 mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-ink-500 mb-4">
             Real-Time Asset Tracking
           </h2>
-          <p className="text-xl text-sand-900 max-w-3xl mx-auto">
+          <p className="text-xl text-ink-400 max-w-3xl mx-auto">
             Track every asset across your entire infrastructure with pinpoint
             accuracy
           </p>
@@ -68,7 +68,7 @@ const WarehouseVisuals = (): ReactElement => {
             <div className="relative w-full h-full flex items-center justify-center">
               <div className="relative w-full bg-white rounded-xl shadow-xl border overflow-hidden">
                 {/* Table Header */}
-                <div className="grid grid-cols-5 bg-sand-100 text-sand-700 text-lg font-semibold px-4 py-3 border-b">
+                <div className="grid grid-cols-5 bg-sand-100 text-ink-400 text-lg font-semibold px-4 py-3 border-b">
                   <div>Asset</div>
                   <div>Tag ID</div>
                   <div>Location</div>
@@ -108,13 +108,13 @@ const WarehouseVisuals = (): ReactElement => {
                         key={i}
                         className="grid grid-cols-5 px-4 py-3 text-base border-b items-center hover:bg-sand-50"
                       >
-                        <div className="font-medium text-sand-700">
+                        <div className="font-medium text-ink-500">
                           Asset {i + 1}
                         </div>
 
-                        <div className="text-sand-500">00028{i + 20}</div>
+                        <div className="text-ink-400">00028{i + 20}</div>
 
-                        <div className="text-sand-900">
+                        <div className="text-ink-500">
                           Warehouse {(i % 3) + 1}
                         </div>
 
@@ -131,7 +131,7 @@ const WarehouseVisuals = (): ReactElement => {
 
                         {/* Actions */}
                         <div className="flex gap-2">
-                          <div className="w-6 h-6 bg-sand-100 rounded flex items-center justify-center text-sand-900 text-xs">
+                          <div className="w-6 h-6 bg-sand-100 rounded flex items-center justify-center text-ink-500 text-xs">
                             <ClockFading className="w-4 h-4" />
                           </div>
                           <div className="w-6 h-6 bg-red-100 rounded flex items-center justify-center text-red-600 text-xs">
@@ -179,7 +179,7 @@ const WarehouseVisuals = (): ReactElement => {
                     {/* <h3 className="text-lg font-bold text-sand-900 mb-2">
                       {feature.title}
                     </h3> */}
-                    <p className="text-sand-900 text-base">
+                    <p className="text-ink-400 text-base">
                       {feature.description}
                     </p>
                   </div>
@@ -189,7 +189,7 @@ const WarehouseVisuals = (): ReactElement => {
           </div>
         </div>
 
-        <div className="bg-sand-900 rounded-2xl p-12">
+        <div className="bg-sand-200 rounded-2xl p-12">
           {/* SCROLL WRAPPER */}
           <div
             className="relative overflow-x-hidden overflow-y-visible py-16"
@@ -225,7 +225,7 @@ const WarehouseVisuals = (): ReactElement => {
               <div className="relative flex items-center">
                 <div className="relative flex items-center h-[118px]">
                   {/* SINGLE CENTER LINE */}
-                  <div className="absolute top-1/2 left-0 w-full h-[2px] bg-sand-600 -translate-y-1/2" />
+                <div className="absolute top-1/2 left-0 w-full h-[2px] bg-ink-300 -translate-y-1/2" />
 
                   {[...assetTimeline, ...assetTimeline].map((item, i) => (
                     <div
@@ -233,20 +233,20 @@ const WarehouseVisuals = (): ReactElement => {
                       className="relative w-[260px] h-full flex items-center justify-center"
                     >
                       {/* DOT */}
-                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-yellow-400 rounded-full z-10 shadow-[0_0_8px_#facc15]" />
+                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-ink-500 rounded-full z-10 shadow-[0_0_10px_rgba(26,20,18,0.25)]" />
 
                       {i % 2 === 0 ? (
                         <>
                           {/* CONNECTOR UP — grows upward from dot center */}
-                          <div className="absolute top-[calc(50%-45px)] left-1/2 -translate-x-1/2 w-[2px] h-[45px] bg-sand-600" />
+                          <div className="absolute top-[calc(50%-45px)] left-1/2 -translate-x-1/2 w-[2px] h-[45px] bg-ink-300" />
 
                           {/* TOP CARD — bottom edge sits exactly at top of connector */}
-                          <div className="absolute bottom-[calc(50%+45px)] w-56 bg-sand-800 border border-sand-600 rounded-xl p-3 text-start transition-transform duration-300 hover:-translate-y-1">
-                            <p className="text-xs text-sand-400">{item.time}</p>
-                            <p className="text-sm font-semibold text-white">
+                          <div className="absolute bottom-[calc(50%+45px)] w-56 bg-sand-100 border border-sand-200 rounded-xl p-3 text-start transition-transform duration-300 hover:-translate-y-1">
+                            <p className="text-xs text-ink-400">{item.time}</p>
+                            <p className="text-sm font-semibold text-ink-500">
                               {item.location}
                             </p>
-                            <p className="text-xs text-sand-300">
+                            <p className="text-xs text-ink-300">
                               checked in by {item.owner}
                             </p>
                           </div>
@@ -254,15 +254,15 @@ const WarehouseVisuals = (): ReactElement => {
                       ) : (
                         <>
                           {/* CONNECTOR DOWN — grows downward from dot center */}
-                          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-[2px] h-[45px] bg-sand-600" />
+                          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 w-[2px] h-[45px] bg-ink-300" />
 
                           {/* BOTTOM CARD — top edge sits exactly at bottom of connector */}
-                          <div className="absolute top-[calc(50%+45px)] w-56 bg-sand-800 border border-sand-600 rounded-xl p-3 text-start transition-transform duration-300 hover:translate-y-1">
-                            <p className="text-xs text-sand-400">{item.time}</p>
-                            <p className="text-sm font-semibold text-white">
+                          <div className="absolute top-[calc(50%+45px)] w-56 bg-sand-100 border border-sand-200 rounded-xl p-3 text-start transition-transform duration-300 hover:translate-y-1">
+                            <p className="text-xs text-ink-400">{item.time}</p>
+                            <p className="text-sm font-semibold text-ink-500">
                               {item.location}
                             </p>
-                            <p className="text-xs text-sand-300">
+                            <p className="text-xs text-ink-300">
                               checked in by {item.owner}
                             </p>
                           </div>
@@ -275,8 +275,8 @@ const WarehouseVisuals = (): ReactElement => {
             </motion.div>
 
             {/* EDGE FADE */}
-            <div className="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-sand-900 to-transparent pointer-events-none" />
-            <div className="absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-sand-900 to-transparent pointer-events-none" />
+            <div className="absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-ink-300 to-transparent pointer-events-none" />
+            <div className="absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-ink-300 to-transparent pointer-events-none" />
           </div>
         </div>
       </div>

@@ -71,7 +71,6 @@ const Hero = ({
               onClick={() => onRequestDemo?.()}
               size="lg"
               className="group bg-ink-500 text-base font-extralight hover:bg-ink-500/80 text-sand-50 p-4 transition-all duration-200 rounded-[6px]"
-
             >
               {primaryCTA}
               <ArrowRight
@@ -84,7 +83,7 @@ const Hero = ({
               onClick={() => onContact?.()}
               size="lg"
               variant="outline"
-              className="group border-2 border-agedGold-500 hover:border-agedGold-700 text-base font-normal text-agedGold-500 hover:text-agedGold-700 p-4 transition-all duration-200 rounded-[6px]"
+              className="group border-2 border-agedGold-500 hover:border-warmGold-400 text-base font-normal text-agedGold-500 hover:text-warmGold-400 p-4 transition-all duration-200 rounded-[6px]"
             >
               <Play className="transition-colors" size={20} />
               {secondaryCTA}
@@ -100,7 +99,7 @@ const Hero = ({
           >
             {stats.map((stat: Stat, index: number) => (
               <div key={index} className="text-center">
-                <div className="text-4xl font-normal text-agedGold-500">
+                <div className="text-4xl font-normal text-agedGold-500 hover:text-warmGold-400 transition-colors duration-200">
                   {stat.value}
                 </div>
                 <div className="text-ink-400 font-normal text-lg">

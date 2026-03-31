@@ -29,7 +29,8 @@ body {
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
-  background-color: #fafbfe;
+  background-color: #fdfbf8;
+  color: #1a1412;
   min-height: 100vh;
   margin: 0;
   overflow-x: hidden;

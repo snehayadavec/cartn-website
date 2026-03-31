@@ -73,10 +73,15 @@ export default function PlatformOverview() {
           transition={{ delay: 0.1, duration: 0.6 }}
           className="text-xl text-ink-400 text-start max-w-3xl mx-auto"
         >
+          {/* Cartn provides a unified platform to track, manage, and monitor
+          physical assets in real time. From inventory visibility to enterprise
+          system integration, the platform enables organizations to maintain
+          control, reduce loss, and operate efficiently across locations. */}
           Cartn provides a unified platform to track, manage, and monitor
           physical assets in real time. From inventory visibility to enterprise
           system integration, the platform enables organizations to maintain
-          control, reduce loss, and operate efficiently across locations.
+          control, minimize asset loss, and operate efficiently across
+          locations.
         </motion.p>
 
         {/* Flow line */}

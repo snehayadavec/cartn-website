@@ -64,30 +64,41 @@ export const platformFeatures: PlatformFeature[] = [
 ];
 
 export const howItWorksSteps = [
-  { id: 1, title: "Asset Tag", description: "RFID/NFC/Barcode", icon: "Tag" },
+  {
+    id: 1,
+    title: "Tag Assets",
+    description: "Assets are tagged using RFID, NFC, barcode or GPS tags",
+    icon: "Tag",
+  },
   {
     id: 2,
-    title: "Reader/Scanner",
-    description: "Capture Data",
-    icon: "Radio",
+    title: "Scan Assets",
+    description: "Assets are scanned during movement and transfers",
+    icon: "ScanLine",
   },
   {
     id: 3,
-    title: "CARTN Platform",
-    description: "Process & Store",
-    icon: "Database",
+    title: "Track Locations",
+    description: "Locations and asset movement are tracked in real-time",
+    icon: "Radar",
   },
   {
     id: 4,
-    title: "Dashboard",
-    description: "Visualize Data",
-    icon: "LayoutDashboard",
+    title: "Platform Analytics",
+    description: "Platform monitors asset data and utilization",
+    icon: "BarChart3",
   },
   {
     id: 5,
-    title: "Analytics",
-    description: "Reports & Insights",
-    icon: "BarChart3",
+    title: "Reports & Alerts",
+    description: "Generate reports, alerts and audit logs",
+    icon: "Bell",
+  },
+  {
+    id: 6,
+    title: "Deploy Solutions",
+    description: "Solutions deployed across warehouses and industries",
+    icon: "Building2",
   },
 ];
 

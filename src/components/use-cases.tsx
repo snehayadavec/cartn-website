@@ -16,8 +16,8 @@ const UseCases: React.FC = () => {
 
   return (
     // <section className="py-24 bg-gradient-to-b from-sand-100 to-white">
-    <section className="py-24 relative overflow-hidden bg-gradient-to-b from-sand-200 via-sand-100 to-slate-100">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white/80 via-sand-100/40 to-transparent" />
+    <section className="py-24 relative overflow-hidden bg-sand-50 text-ink-500">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-sand-50 via-sand-50/70 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -28,7 +28,7 @@ const UseCases: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-2xl md:text-4xl font-bold text-sand-900 mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-ink-500 mb-4">
             Solutions Across Industries
           </h2>
         </motion.div>
@@ -51,15 +51,15 @@ const UseCases: React.FC = () => {
                     </div>
                     <Badge
                       variant="secondary"
-                      className="bg-sand-100 text-[12px] text-sand-700 hover:bg-sand-200 rounded-[4px]"
+                      className="bg-sand-100 text-[12px] text-ink-500 hover:bg-sand-200 rounded-[4px]"
                     >
                       {useCase.industry}
                     </Badge>
                   </div>
-                  <CardTitle className="text-lg font-bold text-sand-900">{useCase.title}</CardTitle>
+                  <CardTitle className="text-lg font-bold text-ink-500">{useCase.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-sand-900 text-base leading-relaxed">
+                  <CardDescription className="text-ink-400 text-base leading-relaxed">
                     {useCase.description}
                   </CardDescription>
                 </CardContent>
@@ -68,7 +68,7 @@ const UseCases: React.FC = () => {
           ))}
         </div>
       </div>
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-slate-100" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-sand-50" />
     </section>
   );
 };
